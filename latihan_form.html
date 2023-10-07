@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>latihan form</title>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+
+            Nama : <input type="text" name="data_Nama" placeholder="Namanya masbro" id="data_nama">
+            password : <input type="password" class="" name="data_pw" id="data_pw" placeholder="password">
+           
+        </form>
+        <button onclick="showdata()">submit</button>
+        
+    </div>
+
+    <div class="content">
+        <div class="hasil_nama"></div>
+        <div class="hasil_password"></div>
+     </div>
+    
+
+    <script type="text/javascript">
+        
+
+        
+        function showdata() {
+            let nama = document.querySelector('#data_nama').value;
+            let password = document.querySelector('#data_pw').value;
+        //    alert("Nama : " + nama + "\npassword : " + password)
+           
+           document.querySelector('.hasil_nama').innerHTML = "Nama : " + nama;
+           document.querySelector('.hasil_password').innerHTML = 'password : ' + password;
+        }
+       
+    </script>
+</body>
+</html>
