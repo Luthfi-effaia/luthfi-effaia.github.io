@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Number form</title>
+    <style>
+        .hasil {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="">
+        <label for="box1">Masukan Angka : </label>
+        <input type="number" class="box1" placeholder="Masukan Angka" name="box1">
+        <br>
+        <label for="box2">Masukan Angka : </label>
+        <input type="number" class="box2" placeholder="Masukan Angka" name="box2">
+        </form>
+    <button class="tambah">+</button>
+    <button class="kurang">-</button>
+    <button class="kali">X</button>
+    <button class="bagi">/</button>
+    </div>
+
+    <div class="hasil"></div>
+
+
+    <script>
+
+        const tambah = document.querySelector('.tambah');
+        const kurang = document.querySelector('.kurang');
+        const kali = document.querySelector('.kali');
+        const bagi = document.querySelector('.bagi');
+
+        
+
+        tambah.addEventListener('click', function() {   
+            let box1 = parseInt(document.querySelector('.box1').value);
+            let box2 = parseInt( document.querySelector('.box2').value);
+            let hasil = document.querySelector('.hasil');
+
+            let result = box1 + box2
+
+           alert(box1 + " + " + box2 + " = " + result);
+           console.log(box1 + " + " + box2 + " = " + result);
+           hasil.innerHTML = box1 + " + " + box2 + " = " + result;
+        })
+
+
+        kurang.addEventListener('click', function() {   
+            let box1 = parseInt(document.querySelector('.box1').value);
+            let box2 = parseInt( document.querySelector('.box2').value);
+            let hasil = document.querySelector('.hasil');
+
+            let result = box1 - box2
+
+           alert(box1 + " - " + box2 + " = " + result);
+           console.log(box1 + " - " + box2 + " = " + result);
+           hasil.innerHTML = box1 + " - " + box2 + " = " + result;
+        })
+
+
+        kali.addEventListener('click', function() {   
+            let box1 = parseInt(document.querySelector('.box1').value);
+            let box2 = parseInt( document.querySelector('.box2').value);
+            let hasil = document.querySelector('.hasil');
+
+            let result = box1 * box2
+
+           alert(box1 + " x " + box2 + " = " + result);
+           console.log(box1 + " x " + box2 + " = " + result);
+           hasil.innerHTML = box1 + " x " + box2 + " = " + result;
+        })
+
+
+        bagi.addEventListener('click', function() {   
+            let box1 = parseInt(document.querySelector('.box1').value);
+            let box2 = parseInt( document.querySelector('.box2').value);
+            let hasil = document.querySelector('.hasil');
+
+            let result = box1 / box2
+
+           alert(box1 + " / " + box2 + " = " + result);
+           console.log(box1 + " / " + box2 + " = " + result);
+           hasil.innerHTML = box1 + " / " + box2 + " = " + result;
+        })
+
+        
+        
+    </script> 
+</body>
+</html>

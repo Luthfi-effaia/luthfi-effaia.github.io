@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas form</title>
+    <style>
+        #Submit {
+            margin-top: 15px;
+        }
+
+        .Hasil {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="0" class="tableform">
+            <form action="">
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input type="text" id="Nama" placeholder="Masukan Nama" name="Nama"></td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td>:</td>
+                <td><input type="text" id="Kelas" placeholder="Masukan Kelas" name="Kelas"></td>
+            </tr>
+            <tr>
+                <td>umur</td>
+                <td>:</td>
+                <td><input type="number" id="Umur" placeholder="Masukan Umur" name="umur"></td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>:</td>
+                <td><input type="text" name="Hobby" id="Hobby" placeholder="Masukan Hobby"></td>
+            </tr>
+        </form>
+        </table>
+        <button id="Submit">Submit</button>
+    </div>
+
+
+    <div class="Hasil">
+
+        <div class="result_Nama"></div>
+        <div class="result_Kelas"></div>
+        <div class="result_Umur"></div>
+        <div class="result_Hobby"></div>
+
+    </div>
+
+        <script>
+            
+            const submit = document.querySelector('#Submit');
+
+            submit.addEventListener('click', function() {
+                let Nama = document.querySelector("#Nama").value
+                let Kelas = document.querySelector("#Kelas").value
+                let Umur = document.querySelector("#Umur").value
+                let Hobby = document.querySelector("#Hobby").value
+
+                console.log(Nama);
+                console.log(Kelas);
+                console.log(Umur + ' Tahun');
+                console.log(Hobby);
+
+                alert("Nama : " + Nama + "\n Kelas : " + Kelas + "\n Umur : " + Umur + " Tahun"+ "\n Hobby : " + Hobby);
+
+                let divnama = document.querySelector(".result_Nama");
+                let divkelas = document.querySelector(".result_Kelas");
+                let divumur = document.querySelector(".result_Umur");
+                let divhobby = document.querySelector(".result_Hobby");
+
+                divnama.innerHTML = "Nama   : " + Nama;
+                divkelas.innerHTML = "Kelas : " + Kelas;
+                divumur.innerHTML = "Umur   : " + Umur + " Tahun";
+                divhobby.innerHTML = "Hobby : " + Hobby;
+            })
+
+
+        </script>
+</body>
+</html>
