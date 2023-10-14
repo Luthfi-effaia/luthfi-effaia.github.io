@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th><a href="home.html">Home</a></th>
+            <th><a href="Gallery.html">Gallery</a></th>
+            <th><a href="Aboutme.html">About me</a></th>
+            <th><a href="Contact.html">Contact</a></th>
+        </tr>
+    </table>
+    <h1>Contact cik</h1>
+    <p>malas mengcontack</p>
+   <table>
+    <tr>
+        <th>Nama</th>
+        <th>:</th>
+        <th><input type="text" name="" id="Nama"></th>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <th>:</th>
+        <th><input type="text" name="" id="Email"></th>
+    </tr>
+    <tr>
+        <th>description</th>
+        <th>:</th>
+        <th><textarea name="" id="textarea" cols="30" rows="10"></textarea></th>
+    </tr>
+   </table>
+   <button onclick="kirim()">Submit</button>
+   <script>
+    function kirim () {
+        let Nama = document.querySelector('#Nama').value
+        let Email = document.querySelector('#Email').value
+        let area = document.querySelector('#textarea').value
+
+        alert("Nama : " + Nama + '\nEmail : ' + Email + '\nDescription : ' + area)
+    }
+   </script>
+</body>
+</html>
